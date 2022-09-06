@@ -1,4 +1,7 @@
 Here is the link to the wireframes on figma
 
-https://www.figma.com/file/4f7lgcyZiMm7LSi5poNnbI/Untitled?node-id=1%3A9
+https://www.figma.com/file/4f7lgcyZiMm7LSi5poNnbI/Foundations-Capstone?node-id=0%3A1
 
+Here is the link to the MVP documentation
+
+https://docs.google.com/document/d/1USo8w7HwYk0poLEwNcO14qWl_2mi5fH42ybgVBraAEU/edit?usp=sharing
