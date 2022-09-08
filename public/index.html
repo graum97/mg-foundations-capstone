@@ -17,5 +17,62 @@
             </ol>
         </nav>
     </header>
+
+    <h1></h1>
+
+    <h2>Add to Your Library</h2>
+    <form id="add-book">
+        <div id="title">
+        <h4>Title</h4>
+            <input
+                type="text"
+                id="title"
+                placeholder="ex. Fahrenheit 451"/>
+        </div>
+
+        <div id="author">      
+        <h4>Author</h4>
+            <input
+                type="text"
+                id="author"
+                placeholder="ex. Ray Bradbury"/>
+        </div>  
+
+        <div id="genre">        
+        <h4>Genre</h4>
+            <select>
+                <option value="fiction">Fiction</option>
+                <option value="literature">Literature</option>
+                <option value="Nonfiction">Nonfiction</option>
+            </select>
+        </div>    
+
+        <div id="obtain-status">
+            <input
+                type="radio"
+                name="obtain"
+                value="own"
+                id="own"/>
+            <label for="own">Own</label>
+
+            <input
+                type="radio"
+                name="obtain"
+                value="borrow"
+                id="borrow"/>
+            <label for="borrow">Borrow</label>
+        </div>    
+
+        <div id="read-status">   
+            <input 
+                type="checkbox"
+                id="read"
+                value="read"/>
+            <label for="read">Read?</label>
+        </div> 
+
+    </form>
+    <script src="/node_modules/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
