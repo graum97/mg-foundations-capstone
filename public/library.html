@@ -26,6 +26,7 @@
         <h4>Title</h4>
             <input
                 type="text"
+                name="title"
                 id="title"
                 placeholder="ex. Fahrenheit 451"/>
         </div>
@@ -34,6 +35,7 @@
         <h4>Author</h4>
             <input
                 type="text"
+                name="author"
                 id="author"
                 placeholder="ex. Ray Bradbury"/>
         </div>  
@@ -41,9 +43,9 @@
         <div id="genre">        
         <h4>Genre</h4>
             <select>
-                <option value="fiction">Fiction</option>
-                <option value="literature">Literature</option>
-                <option value="Nonfiction">Nonfiction</option>
+                <option name="genre" value="fiction">Fiction</option>
+                <option name="genre" value="literature">Literature</option>
+                <option name="genre" value="nonfiction">Nonfiction</option>
             </select>
         </div>    
 
@@ -66,12 +68,24 @@
         <div id="read-status">   
             <input 
                 type="checkbox"
+                name="read"
                 id="read"
                 value="read"/>
             <label for="read">Read?</label>
         </div> 
-
     </form>
+
+    <div id="lists">
+        <h2>To Read</h2>
+        <section id="to-read"></section>
+
+        <h2>Read</h2>
+        <section id="read"></section>
+    </div>
+
+    <footer>
+        <p>Have you read today?</p>
+    </footer>
     <script src="/node_modules/axios/dist/axios.min.js"></script>
     <script src="library.js"></script>
 </body>
