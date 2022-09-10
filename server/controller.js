@@ -1,4 +1,6 @@
-require("dotenv").config();
+const books = require('./db.json');
+let globalID = 31;
+// require("dotenv").config();
 
 // const Sequelize = require('sequelize');
 
@@ -29,5 +31,22 @@ module.exports = {
         let randomLongTime = longTimes[randomIndex];
 
         res.status(200).send(`Read for ${randomLongTime}`);
+    },
+    addBook: (req, res) => {
+        let {title, author, genre, obtain, read} = req.body;
+        const newBook = {
+            id: globalID,
+            title,
+            author,
+            genre,
+            obtain,
+            read
+        };
+        books.push(newBook);
+        res.status(200).send(books);
+        globalID++;
+    },
+    getBooks: (req, res) => {
+        res.status(200).send(books);
     }
 }

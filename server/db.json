@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "title": "What Lies in the Woods",
+        "author": "Kate Alice Marshall",
+        "genre": "Fiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 2,
+        "title": "The Bell Jar",
+        "author": "Sylvia Plath",
+        "genre": "Literature",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 3,
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "genre": "Literature",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 4,
+        "title": "The Butterfly Garden",
+        "author": "Dot Hutchison",
+        "genre": "Fiction",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 5,
+        "title": "Guns, Germs, and Steel",
+        "author": "Jared Diamond",
+        "genre": "Nonfiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 6,
+        "title": "The Shining",
+        "author": "Stephen King",
+        "genre": "Fiction",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 7,
+        "title": "Subliminal",
+        "author": "Leonard Mlodinow",
+        "genre": "Nonfiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 8,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "genre": "Literature",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 9,
+        "title": "Prozac Nation",
+        "author": "Elizabeth Wurtzel",
+        "genre": "Nonfiction",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 10,
+        "title": "Keep Her Safe",
+        "author": "Sophie Hannah",
+        "genre": "Fiction",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 11,
+        "title": "Swallow the Ocean",
+        "author": "Laura M. Flynn",
+        "genre": "Nonfiction",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 12,
+        "title": "As I lay Dying",
+        "author": "William Faulkner",
+        "genre": "Literature",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 13,
+        "title": "Jane Eyre",
+        "author": "Charlotte Bronte",
+        "genre": "Literature",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 14,
+        "title": "The Things They Carried",
+        "author": "Tim O'Brien",
+        "genre": "Literature",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 15,
+        "title": "The Winters",
+        "author": "Lisa Gabriele",
+        "genre": "Fiction",
+        "obtain": "Own",
+        "read": true
+    },
+    {
+        "id": 16,
+        "title": "Dracula",
+        "author": "Bram Stoker",
+        "genre": "Literature",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 17,
+        "title": "The Grapes of Wrath",
+        "author": "John Steinbeck",
+        "genre": "Literature",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 18,
+        "title": "The Bassoon King",
+        "author": "Rainn Wilson",
+        "genre": "Nonfiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 19,
+        "title": "The Dead Zone",
+        "author": "Stephen King",
+        "genre": "Fiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 20,
+        "title": "Rage",
+        "author": "Bob Woodward",
+        "genre": "Nonfiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 21,
+        "title": "Moby Dick",
+        "author": "Herman Melville",
+        "genre": "Literature",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 22,
+        "title": "Room",
+        "author": "Emma Donoghue",
+        "genre": "Fiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 23,
+        "title": "The Real Lolita",
+        "author": "Sarah Weinman",
+        "genre": "Nonfiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 24,
+        "title": "The Secret Life of the Mind",
+        "author": "Mariano Sigman",
+        "genre": "Nonfiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 25,
+        "title": "Mother Country",
+        "author": "Irina Reyn",
+        "genre": "Fiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 26,
+        "title": "Heart of Darkness",
+        "author": "Joseph Conrad",
+        "genre": "Literature",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 27,
+        "title": "The Dark Heart",
+        "author": "Joakim Palmkvist",
+        "genre": "Nonfiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 28,
+        "title": "The Uncoupling",
+        "author": "Meg Wolitzer",
+        "genre": "Fiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 29,
+        "title": "Tracy Flick Can't Win",
+        "author": "Tom Perrotta",
+        "genre": "Fiction",
+        "obtain": "Own",
+        "read": false
+    },
+    {
+        "id": 30,
+        "title": "Mindhunter",
+        "author": "John Douglas",
+        "genre": "Nonfiction",
+        "obtain": "Own",
+        "read": false
+    }
+]
