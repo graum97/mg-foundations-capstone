@@ -50,5 +50,21 @@ module.exports = {
     getBooks: (req, res) => {
         console.log("back-end get books");
         res.status(200).send(books);
+    },
+    moveBook: (req, res) => {
+        // console.log(req.params);
+        // console.log(req.body);
+        const {id, read} = req.body
+     
+        console.log(id, read);
+    
+        for (let i = 0; i < books.length; i++) {
+            if (id === books[i].id) {
+                books[i].read = read
+                console.log(books[i])
+                return
+            }
+        }
+
     }
 }

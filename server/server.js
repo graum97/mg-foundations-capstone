@@ -16,7 +16,8 @@ const {getQuickRead} = require('./controller');
 const {getGotTime} = require('./controller');
 
 const {getBooks} = require('./controller');
-const {addBook} = require('./controller');
+const {addBook, moveBook} = require('./controller');
+// const {moveBook} = require('./controller');
 
 //connect fuctions to endpoints
 app.get('/api/quick-read', getQuickRead);
@@ -24,6 +25,7 @@ app.get('/api/got-time', getGotTime);
 
 app.get("/api/library", getBooks);
 app.post("/api/library", addBook);
+app.put("/api/library/", moveBook);
 
 // app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`));
 

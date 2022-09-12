@@ -9,14 +9,20 @@ const readList = document.querySelector('#read-container');
 const baseURL = `http://localhost:6006/api/library`
 
 //axios functions
-const bookCallback = ({data: books}) => {
-    displayBooks(books);
-    console.log(books);
-}
+const bookCallback = ({data: books}) => displayBooks(books);
 const errCallback = err => console.log(err);
 
 const getBooks = () => axios.get(baseURL).then(bookCallback).catch(errCallback);
 const addBook = body => axios.post(baseURL, body).then(console.log("add book front"),bookCallback).catch(errCallback);
+const moveBook = (id) => {
+    let isRead = document.querySelector(`#id-${id}`);
+    let obj = {
+        id:id,
+        read: isRead.checked
+    }
+       // console.log(isRead.checked)
+    axios.put(`${baseURL}/`, obj).then(getBooks()).catch(errCallback);
+}
 
 function addBookButton(event) {
     event.preventDefault();
@@ -57,26 +63,44 @@ function createBookCard(book) {
     bookCard.innerHTML = `<p class="book">${book.title} by ${book.author}</p>
     <p class="genre">${book.genre}</p>
     <p class="obtain">${book.obtain}</p>
-    <input type="checkbox" value="Read?"${checked}>Read?</input>`
+    <input type="checkbox" ${checked} onclick='moveBook(${book.id})' id='id-${book.id}'>Read?</input>`
 
-    if (book.read === true) {
-        readList.appendChild(bookCard)
-    } else {
-        toReadList.appendChild(bookCard)
-    };
+    // if (book.read === true) {
+    //     readList.appendChild(bookCard)
+    // } else {
+    //     toReadList.appendChild(bookCard)
+    // };
+    // console.log(bookCard)
+    return bookCard
 };
 
 
 function displayBooks(array) {
-    // toReadList.innerHTML = ``
-    // for (let i = 0; i < arr.length; i++) {
-    //     createBookCard(arr[i])
-    // }
-    readList.innerHTML = ``
+    toReadList.innerHTML = ``;
+    readList.innerHTML = ``;
+    // console.log('here is book list',array)
     for (let i = 0; i < array.length; i++) {
-        createBookCard(array[i]);
+        let bookCard = createBookCard(array[i]);
+        
+       if(array[i].read===false){
+        
+        toReadList.appendChild(bookCard)
+       }else{
+        readList.appendChild(bookCard)
+       }
     }
+    // for (let i = 0; i < array.length; i++) {
+    //     createBookCard(array[i]);
+    // }
 };
+
+// function moveBook(id) {
+//     let checked = ''
+
+//     if (book.read === false && checked === "checked") {
+//         readList.appendChild(bookcard)
+//     }
+// }
 
 newBookForm.addEventListener('submit', addBookButton)
 

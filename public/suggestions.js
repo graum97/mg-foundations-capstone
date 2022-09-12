@@ -12,7 +12,7 @@ const iveGotTimeButton = document.getElementById("longChallenge");
 const baseURL = `http://localhost:6006/api/suggestions`
 
 const getQuickRead = () => {
-    axios.get("http://localhost:6006/quick-read")
+    axios.get("http://localhost:6006/api/quick-read")
         .then(res => {
             const data = res.data;
             alert(data);
@@ -20,7 +20,7 @@ const getQuickRead = () => {
 };
 
 const getGotTime = () => {
-    axios.get("http://localhost:6006/got-time")
+    axios.get("http://localhost:6006/api/got-time")
         .then(res => {
             const data = res.data;
             alert(data);
