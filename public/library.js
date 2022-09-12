@@ -13,7 +13,7 @@ const bookCallback = ({data: books}) => displayBooks(books);
 const errCallback = err => console.log(err);
 
 const getBooks = () => axios.get(baseURL).then(bookCallback).catch(errCallback);
-const addBook = body => axios.post(baseURL, body).then(console.log("add book front"),bookCallback).catch(errCallback);
+const addBook = body => axios.post(baseURL, body).then(console.log("add book front"),getBooks()).catch(errCallback);
 const moveBook = (id) => {
     let isRead = document.querySelector(`#id-${id}`);
     let obj = {

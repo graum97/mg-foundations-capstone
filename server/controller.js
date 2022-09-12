@@ -33,7 +33,8 @@ module.exports = {
         res.status(200).send(`Read for ${randomLongTime}`);
     },
     addBook: (req, res) => {
-        console.log("add book");
+        // console.log("add book");
+        
         let {title, author, genre, obtain, read} = req.body;
         const newBook = {
             id: globalID,
@@ -43,7 +44,9 @@ module.exports = {
             obtain,
             read
         };
+        // console.log(newBook)
         books.push(newBook);
+        console.log(books)
         res.status(200).send(books);
         globalID++;
     },
