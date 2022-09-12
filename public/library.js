@@ -9,11 +9,14 @@ const readList = document.querySelector('#read-container');
 const baseURL = `http://localhost:6006/api/library`
 
 //axios functions
-const bookCallback = ({data: books}) => displayBooks(books);
+const bookCallback = ({data: books}) => {
+    displayBooks(books);
+    console.log(books);
+}
 const errCallback = err => console.log(err);
 
 const getBooks = () => axios.get(baseURL).then(bookCallback).catch(errCallback);
-const addBook = body => axios.post(baseURL, body).then(bookCallback).catch(errCallback);
+const addBook = body => axios.post(baseURL, body).then(console.log("add book front"),bookCallback).catch(errCallback);
 
 function addBookButton(event) {
     event.preventDefault();
@@ -41,29 +44,37 @@ function addBookButton(event) {
     readSelection = Boolean
 }
 
+
+
 function createBookCard(book) {
     const bookCard = document.createElement('div')
     bookCard.classList.add('book-card')
+    let checked = ''
 
+    if (book.read === true) {
+        checked = "checked";
+    }
     bookCard.innerHTML = `<p class="book">${book.title} by ${book.author}</p>
     <p class="genre">${book.genre}</p>
     <p class="obtain">${book.obtain}</p>
-    <input type="checkbox" value="Read?" onclick="javascript:if(document.getElementById('read').checked) readList.appendChild(bookCard); else toReadList.appendChild(bookCard);"</input>`
-    // if (book.read === true) {
-        // readList.appendChild(bookCard)
-    // } else {
-    //     toReadList.appendChild(bookCard)
-    // };
+    <input type="checkbox" value="Read?"${checked}>Read?</input>`
+
+    if (book.read === true) {
+        readList.appendChild(bookCard)
+    } else {
+        toReadList.appendChild(bookCard)
+    };
 };
 
-function displayBooks(arr) {
+
+function displayBooks(array) {
     // toReadList.innerHTML = ``
     // for (let i = 0; i < arr.length; i++) {
     //     createBookCard(arr[i])
     // }
     readList.innerHTML = ``
-    for (let i = 0; i < arr.length; i++) {
-        createBookCard(arr[i])
+    for (let i = 0; i < array.length; i++) {
+        createBookCard(array[i]);
     }
 };
 

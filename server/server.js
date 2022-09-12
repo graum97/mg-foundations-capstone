@@ -12,18 +12,18 @@ app.use(cors());
 
 
 //pull module exports
-const {getQuickRead} = require('./controller.js');
-const {getGotTime} = require('./controller.js');
+const {getQuickRead} = require('./controller');
+const {getGotTime} = require('./controller');
 
-const {getBooks} = require('./controller.js');
-const {addBook} = require('./controller.js');
+const {getBooks} = require('./controller');
+const {addBook} = require('./controller');
 
 //connect fuctions to endpoints
 app.get('/api/quick-read', getQuickRead);
 app.get('/api/got-time', getGotTime);
 
-app.get("/api/books", getBooks);
-app.post("/api/books", addBook);
+app.get("/api/library", getBooks);
+app.post("/api/library", addBook);
 
 // app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`));
 

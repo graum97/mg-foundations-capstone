@@ -4,7 +4,7 @@ let globalID = 31;
 
 // const Sequelize = require('sequelize');
 
-const {CONNECTION_STRING} = process.env;
+// const {CONNECTION_STRING} = process.env;
 
 // const sequelize = new Sequelize(CONNECTION_STRING, {
 //     dialect: 'postgress',
@@ -33,6 +33,7 @@ module.exports = {
         res.status(200).send(`Read for ${randomLongTime}`);
     },
     addBook: (req, res) => {
+        console.log("add book");
         let {title, author, genre, obtain, read} = req.body;
         const newBook = {
             id: globalID,
@@ -47,6 +48,7 @@ module.exports = {
         globalID++;
     },
     getBooks: (req, res) => {
+        console.log("back-end get books");
         res.status(200).send(books);
     }
 }
