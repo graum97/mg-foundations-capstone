@@ -15,13 +15,20 @@ app.use(cors());
 const {getQuickRead} = require('./controller');
 const {getGotTime} = require('./controller');
 
+const {getLiterature} = require('./controller');
+const {getFiction} = require('./controller');
+const {getNonfiction} = require('./controller');
+
 const {getBooks} = require('./controller');
 const {addBook, moveBook} = require('./controller');
-// const {moveBook} = require('./controller');
 
 //connect fuctions to endpoints
 app.get('/api/quick-read', getQuickRead);
 app.get('/api/got-time', getGotTime);
+
+app.get("/api/literature", getLiterature);
+app.get("/api/fiction", getFiction);
+app.get("/api/nonfiction", getNonfiction);
 
 app.get("/api/library", getBooks);
 app.post("/api/library", addBook);

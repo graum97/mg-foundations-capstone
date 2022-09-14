@@ -3,15 +3,50 @@
 	display: inline;
 }
 
+body {
+  background-color: #f1faee;
+}
+
+header {
+  background-color: #72A1E5;
+}
+
 #add-book {
-    background-color: rgb(69, 114, 114);
+    width: 300px;
+    color: white;
+    background-color: #4A4E69;
     position: relative;
     display: flex; 
     flex-direction: column;
-    justify-content: space-evenly; 
+    justify-content: center; 
     align-items: center;
     margin: 30px;
+    padding: 20px;
   }
+
+#title { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#author { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+#genre { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
 
 #to-read-container {
     display: flex;
@@ -28,7 +63,19 @@
   }
 
   .book {
-    background-color: turquoise;
+    background-color: #9A8C98;
+    width: 300px;
+    margin: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .book-card {
+    background-color: #9883E5;
     width: 300px;
     margin: 20px; 
     display: flex;

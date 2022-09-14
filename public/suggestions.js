@@ -1,9 +1,9 @@
 //grab fiction suggestion
-const fictionButton = document.getElementsByClassName("suggestFicButton")
+const fictionButton = document.getElementById("suggestFicButton")
 //grab literature suggestion
-const literatureButton = document.getElementsByClassName("suggestLitButton")
+const literatureButton = document.getElementById("suggestLitButton")
 //grab nonfiction suggestion
-const nonfictionButton = document.getElementsByClassName("suggestNonButton")
+const nonfictionButton = document.getElementById("suggestNonButton")
 //grab quick-read challenge
 const quickReadButton = document.getElementById('quickChallenge');
 //grab ive-got-time challenge
@@ -27,9 +27,36 @@ const getGotTime = () => {
         });
 };
 
-// alert("test")
+const getLiterature = () => {
+    axios.get("http://localhost:6006/api/literature")
+        .then(res => {
+            const data = res.data;
+            alert(data);
+        });
+};
 
-//activate quickRead button
+const getFiction = () => {
+    axios.get("http://localhost:6006/api/fiction")
+        .then(res => {
+            const data = res.data;
+            alert(data);
+        });
+};
+
+const getNonfiction = () => {
+    axios.get("http://localhost:6006/api/nonfiction")
+        .then(res => {
+            const data = res.data;
+            alert(data);
+        });
+};
+
 quickReadButton.addEventListener('click', getQuickRead);
-//activate iveGotTime button
+
 iveGotTimeButton.addEventListener('click', getGotTime);
+
+literatureButton.addEventListener('click', getLiterature);
+
+fictionButton.addEventListener('click', getFiction);
+
+nonfictionButton.addEventListener('click', getNonfiction);

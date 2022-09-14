@@ -1,4 +1,3 @@
-
 //grab add book form
 const newBookForm = document.querySelector("form")
 //grab to-read contatiner
@@ -20,7 +19,6 @@ const moveBook = (id) => {
         id:id,
         read: isRead.checked
     }
-       // console.log(isRead.checked)
     axios.put(`${baseURL}/`, obj).then(getBooks()).catch(errCallback);
 }
 
@@ -50,8 +48,6 @@ function addBookButton(event) {
     readSelection = Boolean
 }
 
-
-
 function createBookCard(book) {
     const bookCard = document.createElement('div')
     bookCard.classList.add('book-card')
@@ -74,33 +70,19 @@ function createBookCard(book) {
     return bookCard
 };
 
-
 function displayBooks(array) {
     toReadList.innerHTML = ``;
     readList.innerHTML = ``;
-    // console.log('here is book list',array)
+    
     for (let i = 0; i < array.length; i++) {
-        let bookCard = createBookCard(array[i]);
-        
-       if(array[i].read===false){
-        
-        toReadList.appendChild(bookCard)
-       }else{
-        readList.appendChild(bookCard)
+       let bookCard = createBookCard(array[i]);
+       if(array[i].read===false) {
+            toReadList.appendChild(bookCard)
+       } else {
+            readList.appendChild(bookCard)
        }
     }
-    // for (let i = 0; i < array.length; i++) {
-    //     createBookCard(array[i]);
-    // }
 };
-
-// function moveBook(id) {
-//     let checked = ''
-
-//     if (book.read === false && checked === "checked") {
-//         readList.appendChild(bookcard)
-//     }
-// }
 
 newBookForm.addEventListener('submit', addBookButton)
 
