@@ -56,7 +56,8 @@ function createBookCard(book) {
     if (book.read === true) {
         checked = "checked";
     }
-    bookCard.innerHTML = `<p class="book">${book.title} by ${book.author}</p>
+    bookCard.innerHTML = `<p class="book">${book.title}</p>
+    <p class="author">By: ${book.author}</p>
     <p class="genre">${book.genre}</p>
     <p class="obtain">${book.obtain}</p>
     <input type="checkbox" ${checked} onclick='moveBook(${book.id})' id='id-${book.id}'>Read?</input>`

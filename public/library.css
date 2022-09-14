@@ -1,14 +1,25 @@
 .crumb {
 	margin-right: 2em;
 	display: inline;
+  font-weight: bold;
+	color: black;
 }
 
 body {
-  background-color: #f1faee;
+  background-color: #cef2f2;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header {
-  background-color: #72A1E5;
+  background-image: linear-gradient(45deg, #9883E5, #55C1FF);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ height: 100px;
+}
+
+#header {
+  display: inline; 
+    /* flex-direction: column;
+    justify-content: center;  */
 }
 
 #add-book {
@@ -22,6 +33,8 @@ header {
     align-items: center;
     margin: 30px;
     padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   }
 
 #title { 
@@ -63,25 +76,24 @@ header {
   }
 
   .book {
-    background-color: #9A8C98;
     width: 300px;
     margin: 20px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 12px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    justify-content: center;
+    overflow-wrap: break-word;
+    font-weight: bolder;
   }
 
+
   .book-card {
-    background-color: #9883E5;
+    background-image: linear-gradient(45deg, #9883E5, #55C1FF);
     width: 300px;
     margin: 20px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 12px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   }
