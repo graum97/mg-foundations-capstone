@@ -28,7 +28,7 @@ const moveBook = (id) => {
         id:id,
         read: isRead.checked
     }
-    axios.put(`${baseURL}/`, obj).then(getBooks()).catch(errCallback);
+    axios.put(`${baseURL}/`, obj).then(getBooks).catch(errCallback);
 }
 
 function addBookButton(event) {

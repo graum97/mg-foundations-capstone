@@ -111,7 +111,7 @@ module.exports = {
             if (id === books[i].id) {
                 books[i].read = read
                 console.log(books[i])
-                return
+                return res.sendStatus(200);
             }
         }
 
