@@ -25,7 +25,7 @@ header {
 
 #header {
   display: inline; 
-  margin-left: 50px;
+  margin-right: 500px;
   font-size: 40pt;
   text-shadow: 2px 2px #50C9CE;
 }
@@ -121,7 +121,7 @@ header {
     align-items: center;
     justify-content: flex-start;
     font-weight: bolder;
-    font-size: medium;
+    font-size: 15pt;
     text-shadow: .5px .5px #FCD3DE;
   }
 

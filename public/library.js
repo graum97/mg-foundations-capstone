@@ -55,6 +55,8 @@ function createBookCard(book) {
 
     if (book.read === true) {
         checked = "checked";
+    } else {
+        checked = "unchecked"
     }
     bookCard.innerHTML = `
     <div class="book-details"><p class="book">${book.title}</p>
@@ -89,6 +91,6 @@ function displayBooks(array) {
     }
 };
 
-newBookForm.addEventListener('submit', addBookButton)
+newBookForm.addEventListener('submit', addBookButton) 
 
 getBooks()
