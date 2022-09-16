@@ -19,7 +19,6 @@ MyBrary is a web application created by Mara Grau. She set out to create simple 
 * HTML
 * CSS
 
-(dependencies are listed in requirements.txt)
 
 ## <a name="run"></a>How to locally run MyBrary
 
