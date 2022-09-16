@@ -1,13 +1,12 @@
-//grab add book form
 const newBookForm = document.querySelector("form")
-//grab to-read contatiner
+
 const toReadList = document.querySelector('#to-read-container');
-//grab read container
+
 const readList = document.querySelector('#read-container');
-//establish baseURL
+
 const baseURL = `http://localhost:6006/api/library`
 
-//axios functions
+
 const bookCallback = ({data: books}) => displayBooks(books);
 const errCallback = err => console.log(err);
 
@@ -38,14 +37,10 @@ function addBookButton(event) {
     let authorInput = document.querySelector('input[name="author"]');
     let genreSelection = document.querySelector('option[value]');
     let obtainSelection = document.querySelector('input[name="obtain"]:checked');
-    // let readSelection = document.querySelector('input[name="read"]:checked');
-    // let readSelection = document.getElementById("read");
-    // console.log(readSelection.value);
-
-let isChecked = false;
-if(document.getElementById("read").checked) {
-    isChecked = true;
-}
+    let isChecked = false;
+    if(document.getElementById("read").checked) {
+        isChecked = true;
+    }
 console.log(isChecked);
     let bookObject = {
         title: titleInput.value,
@@ -84,12 +79,6 @@ function createBookCard(book) {
     <input type="checkbox" ${checked} onclick='moveBook(${book.id})' id='id-${book.id}'>Read?</input>
     </div>`
 
-    // if (book.read === true) {
-    //     readList.appendChild(bookCard)
-    // } else {
-    //     toReadList.appendChild(bookCard)
-    // };
-    // console.log(bookCard)
     return bookCard
 };
 

@@ -1,12 +1,11 @@
-//grab fiction suggestion
 const fictionButton = document.getElementById("suggestFicButton")
-//grab literature suggestion
+
 const literatureButton = document.getElementById("suggestLitButton")
-//grab nonfiction suggestion
+
 const nonfictionButton = document.getElementById("suggestNonButton")
-//grab quick-read challenge
+
 const quickReadButton = document.getElementById('quickChallenge');
-//grab ive-got-time challenge
+
 const iveGotTimeButton = document.getElementById("longChallenge");
 
 const baseURL = `http://localhost:6006/api/suggestions`

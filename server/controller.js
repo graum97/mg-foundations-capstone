@@ -1,19 +1,5 @@
 const books = require('./db.json');
 let globalID = 31;
-// require("dotenv").config();
-
-// const Sequelize = require('sequelize');
-
-// const {CONNECTION_STRING} = process.env;
-
-// const sequelize = new Sequelize(CONNECTION_STRING, {
-//     dialect: 'postgress',
-//     dialectOptions: {
-//         ssl: {
-//             rejectUnauthorized: false
-//         }
-//     }
-// });
 
 module.exports = {
     getQuickRead: (req, res) => {
@@ -76,9 +62,7 @@ module.exports = {
         res.status(200).send(`Read ${randomNonfiction.title} by ${randomNonfiction.author}`);
     },
 
-    addBook: (req, res) => {
-        // console.log("add book");
-        
+    addBook: (req, res) => {        
         let {title, author, genre, obtain, read} = req.body;
         const newBook = {
             id: globalID,
@@ -101,8 +85,6 @@ module.exports = {
     },
 
     moveBook: (req, res) => {
-        // console.log(req.params);
-        // console.log(req.body);
         const {id, read} = req.body
      
         console.log(id, read);
